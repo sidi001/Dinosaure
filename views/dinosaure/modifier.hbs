@@ -1,0 +1,33 @@
+<h3>{{viewTitle}}</h3>
+<form action="/dinosaure/signup" class="tab-pane" id="2" method="POST" autocomplete="off">
+    <input type="hidden" name="_id" value="{{dinosaure._id}}">
+    <div class="form-group">
+        <label>Login</label>
+        <input type="text" class="form-control" name="login" placeholder="Dinosaure name" value="{{dinosaure.login}}">
+        <div class="text-danger">
+            {{dinosaure.loginError}}</div>
+    </div>
+    
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label>Age</label>
+            <input type="Number" class="form-control" name="age" placeholder="AGE" value="{{dinosaure.age}}">
+        </div>
+        <div class="form-group col-md-6">
+            <label>Race</label>
+            <input type="text" class="form-control" name="race" placeholder="Race" value="{{dinosaure.race}}">
+        </div>
+        <div class="form-group col-md-6">
+            <label>Famille</label>
+            <input type="text" class="form-control" name="famille" placeholder="Famille" value="{{dinosaure.famille}}">
+        </div>
+        <div class="form-group col-md-6">
+            <label>Nourriture</label>
+            <input type="text" class="form-control" name="nourriture" placeholder="nourriture1,nourriture2..." value="{{dinosaure.nourriture}}">
+        </div>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-info"><i class="fa fa-database"></i> Enregistrer</button>
+        <a class="btn btn-danger" href="/dinosaure/listAmi/{{dinosaure._id}}"" data-toggle="tab"><i class="fa fa-list-alt"></i> Retour</a>
+    </div>
+</form>

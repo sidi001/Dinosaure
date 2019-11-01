@@ -1,0 +1,28 @@
+{
+  "name": "dinosaure",
+  "version": "1.0.0",
+  "description": "L'objectif est de créer un mini carnet d'adresse pour \"Dinosaure\" sur Express.js (sous forme d'API) avec une DB Mongo de référence.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sidi001/Dinosaure.git"
+  },
+  "author": "sidi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sidi001/Dinosaure/issues"
+  },
+  "homepage": "https://github.com/sidi001/Dinosaure#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "jwt-simple": "^0.5.6",
+    "mongoose": "^5.7.7",
+    "nodemon": "^1.19.4",
+    "password-hash": "^1.2.2"
+  }
+}

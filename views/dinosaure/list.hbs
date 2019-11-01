@@ -1,0 +1,35 @@
+
+<h3>Liste Dinosaure non amis....<a class="btn btn-info" href="/dinosaure/modifier/{{dinoID}}"><i class="fa fa-list"></i>Affichier Mes informations</a></h3>
+<h3><a class="btn btn-secondary" href="/dinosaure/listAmi/{{dinoID}}"><i class="fa fa-list"></i> Voir Liste amis</a></h3>
+
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Login</th>
+            <th>famille</th>
+            <th>Race</th>
+            <th>Age</th>
+            <th>Nourriture</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each list}}
+        <tr>
+            <td>{{this.login}}</td>
+            <td>{{this.famille}}</td>
+            <td>{{this.race}}</td>
+            <td>{{this.age}}</td>
+            <td>{{this.nourriture}}</td>
+
+            <td>
+                
+                <a href="/dinosaure/addAmi/{{../dinoID}}/{{this.login}}"><i class="fa fa-plus fa-lg" aria-hidden="true"></i></a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+
+<h3><a class="btn btn-info" href="/dinosaure"><i class="fa fa-power-off"></i> se deconnecter</a> </h3>

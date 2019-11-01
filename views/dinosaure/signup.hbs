@@ -1,0 +1,65 @@
+
+
+<form action="/dinosaure/connect" class="tab-pane" id="1" method="POST" autocomplete="off">
+    <h3>CONNEXION</h3>
+    <input type="hidden" name="_id" value="{{dinosaure._id}}">
+    <div class="form-group">
+        <label>Login</label>
+        <input type="text" class="form-control" name="login" placeholder="Dinosaure name" value="{{dinosaure.login}}">
+        <div class="text-danger">
+            {{dinosaure.loginError}}</div>
+    </div>
+    <div class="form-group">
+        <label>Mot de passe</label>
+        <input type="password" class="form-control" name="password" placeholder="mot de passe" value="{{dinosaure.password}}">
+        <div class="text-danger">
+            {{dinosaure.passwordError}}</div>
+    </div>
+    
+    <div class="form-group">
+        <button type="submit" class="btn btn-success"><i class="fa fa-database"></i> Connexion</button>
+        <a class="btn btn-secondary" href="#2" data-toggle="tab" ><i class="fa fa-list-alt"></i> Inscription</a>
+    </div>
+</form>
+
+<hr/>
+<br/>
+
+<h3>{{viewTitle}}</h3>
+<form action="/dinosaure/signup" class="tab-pane" id="2" method="POST" autocomplete="off">
+    <input type="hidden" name="_id" value="{{dinosaure._id}}">
+    <div class="form-group">
+        <label>Login</label>
+        <input type="text" class="form-control" name="login" placeholder="Dinosaure name" value="{{dinosaure.login}}">
+        <div class="text-danger">
+            {{dinosaure.loginError}}</div>
+    </div>
+    <div class="form-group">
+        <label>Mot de passe</label>
+        <input type="password" class="form-control" name="password" placeholder="mot de passe" value="{{dinosaure.password}}">
+        <div class="text-danger">
+            {{dinosaure.passwordError}}</div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label>Age</label>
+            <input type="Number" class="form-control" name="age" placeholder="AGE" value="{{dinosaure.age}}">
+        </div>
+        <div class="form-group col-md-6">
+            <label>Race</label>
+            <input type="text" class="form-control" name="race" placeholder="Race" value="{{dinosaure.race}}">
+        </div>
+        <div class="form-group col-md-6">
+            <label>Famille</label>
+            <input type="text" class="form-control" name="famille" placeholder="Famille" value="{{dinosaure.famille}}">
+        </div>
+        <div class="form-group col-md-6">
+            <label>Nourriture</label>
+            <input type="text" class="form-control" name="nourriture" placeholder="nourriture1,nourriture2..." value="{{dinosaure.nourriture}}">
+        </div>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-info"><i class="fa fa-database"></i> Enregistrer</button>
+        <a class="btn btn-secondary" href="#1" data-toggle="tab"><i class="fa fa-list-alt"></i> Login</a>
+    </div>
+</form>
